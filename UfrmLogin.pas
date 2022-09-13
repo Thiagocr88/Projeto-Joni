@@ -46,7 +46,7 @@ function getDatalimite(): TDateTime;
    valorParametro: String;
  begin
 
-
+  DataModule1.fdQryParametro.close;
   DataModule1.fdQryParametro.sql.clear;
   DataModule1.fdQryParametro.sql.add('SELECT valor FROM tb_parametro WHERE nm_parametro = :pnm_parametro ');
   DataModule1.fdQryParametro.parambyname('pnm_parametro').value := 'data_limite';
